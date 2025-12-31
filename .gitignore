@@ -1,0 +1,11 @@
+.DS_Store
+.devcontainer/
+.idea/
+.vscode/
+build/
+vendor/
+
+.phpunit.result.cache
+composer.phar
+
+*~
