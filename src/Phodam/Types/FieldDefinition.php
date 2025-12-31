@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Phodam\Analyzer;
+namespace Phodam\Types;
 
 class FieldDefinition
 {

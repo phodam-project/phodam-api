@@ -52,4 +52,3 @@ interface ProviderContextInterface extends PhodamInterface
      */
     public function getConfig(): array;
 }
-

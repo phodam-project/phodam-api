@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Phodam\Store;
 
-use Phodam\Analyzer\TypeDefinition;
+use Phodam\Types\TypeDefinition;
 use Phodam\Provider\ProviderInterface;
 
 interface RegistrarInterface
@@ -39,4 +39,3 @@ interface RegistrarInterface
      */
     public function registerDefinition(TypeDefinition $definition): void;
 }
-
