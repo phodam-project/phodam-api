@@ -1,0 +1,81 @@
+{
+    "name": "phodam/phodam-api",
+    "description": "The API for Phodam",
+    "type": "library",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "keywords": [
+      "unit tests",
+      "testing",
+      "data objects"
+    ],
+    "homepage": "https://github.com/phodam-project/phodam-api",
+    "readme": "README.md",
+    "authors": [
+      {
+        "name": "Andrew Vehlies",
+        "email": "avehlies@gmail.com",
+        "role": "Owner"
+      },
+      {
+        "name": "Chris Bouchard",
+        "email": "chris@upliftinglemma.net",
+        "role": "Developer"
+      }
+    ],
+    "require": {
+      "php": "^8.4"
+    },
+    "config": {
+      "platform": {
+        "php": "8.4"
+      },
+      "allow-plugins": {
+        "phpstan/extension-installer": true
+      }
+    },
+    "require-dev": {
+      "phpstan/phpstan": "^1.10",
+      "phpunit/phpunit": "^11.0",
+      "squizlabs/php_codesniffer": "~3.6",
+      "friendsofphp/php-cs-fixer": "^3.32.0",
+      "phpstan/extension-installer": "^1.3",
+      "phpstan/phpstan-phpunit": "^1.3",
+      "sebastian/diff": "^6.0.2"
+    },
+    "autoload": {
+      "psr-4": {
+        "Phodam\\": "src/Phodam"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "PhodamTests\\": "tests"
+      }
+    },
+    "scripts": {
+      "lint:phpcs": "phpcs --standard=PSR12 src",
+      "lint:phpcsfixer": "php-cs-fixer fix src --rules=@PSR12 --dry-run --cache-file=build/.php-cs-fixer.cache",
+      "lint:phpcsfixer:fix": "php-cs-fixer fix src --rules=@PSR12 --cache-file=build/.php-cs-fixer.cache",
+      "lint:phpstan": "phpstan analyse -l 6 src",
+      "test:phpunit": "phpunit -c phpunit.xml",
+      "lint": [
+        "mkdir -p build",
+        "@lint:phpstan",
+        "@lint:phpcs",
+        "@lint:phpcsfixer"
+      ],
+      "lint-fix": [
+        "@lint:phpcsfixer:fix"
+      ],
+      "test": [
+        "mkdir -p build",
+        "@test:phpunit"
+      ],
+      "precommit": [
+        "@lint",
+        "@test"
+      ]
+    }
+  }
+  
