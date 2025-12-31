@@ -9,6 +9,7 @@
         failOnWarning="true"
         testdox="false" 
         displayDetailsOnIncompleteTests="true"
+        displayDetailsOnPhpunitDeprecations="true"
         displayDetailsOnSkippedTests="true"
         displayDetailsOnTestsThatTriggerDeprecations="true"
         displayDetailsOnTestsThatTriggerErrors="true"
