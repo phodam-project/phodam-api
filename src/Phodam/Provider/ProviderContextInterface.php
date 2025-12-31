@@ -11,7 +11,7 @@ namespace Phodam\Provider;
 
 use Phodam\PhodamInterface;
 
-interface ProviderContextInterface extends PhodamInterface
+interface ProviderContextInterface
 {
     /**
      * Return the type to be created by the provider.
@@ -51,4 +51,11 @@ interface ProviderContextInterface extends PhodamInterface
      * @return array<string, mixed>
      */
     public function getConfig(): array;
+
+    /**
+     * Return the Phodam instance.
+     *
+     * @return PhodamInterface
+     */
+    public function getPhodam(): PhodamInterface;
 }
