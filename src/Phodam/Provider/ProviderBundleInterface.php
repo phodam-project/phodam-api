@@ -17,14 +17,14 @@ interface ProviderBundleInterface
     /**
      * Returns an array of provider class names that should be registered.
      * These classes will be scanned for PhodamProvider/PhodamArrayProvider attributes.
-     * 
+     *
      * @return array<class-string<ProviderInterface>>
      */
     public function getProviders(): array;
 
     /**
      * Returns an array of type definitions that should be registered.
-     * 
+     *
      * @return array<TypeDefinition>
      */
     public function getTypeDefinitions(): array;

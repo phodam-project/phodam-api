@@ -13,7 +13,7 @@ use Attribute;
 
 /**
  * Attribute to declare an array provider.
- * 
+ *
  * Array providers must be named. Place this attribute on an array provider class
  * to declare its name and optional override flag.
  */
@@ -23,5 +23,6 @@ class PhodamArrayProvider
     public function __construct(
         public string $name,
         public bool $overriding = false
-    ) {}
+    ) {
+    }
 }
