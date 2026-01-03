@@ -10,18 +10,20 @@ declare(strict_types=1);
 namespace Phodam;
 
 use Phodam\Provider\ProviderBundleInterface;
+use Phodam\Provider\ProviderInterface;
+use Phodam\Types\TypeDefinition;
 
 interface PhodamSchemaInterface
 {
     /**
-     * @param ProviderBundleInterface | class-string<ProviderBundleInterface> $bundle
+     * @param ProviderBundleInterface | class-string<ProviderBundleInterface> $bundleOrClass
      */
-    public function registerBundle($bundle): void;
+    public function registerBundle($bundleOrClass): void;
 
     /**
      * @param ProviderInterface | class-string<ProviderInterface> $providerOrClass
      */
-    public function registerProvider($provider): void;
+    public function registerProvider($providerOrClass): void;
 
     /**
      * @param TypeDefinition $definition

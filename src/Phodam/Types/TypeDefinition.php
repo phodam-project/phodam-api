@@ -42,7 +42,7 @@ class TypeDefinition
     {
         return $this->name;
     }
-    
+
     /**
      * @return bool
      */
