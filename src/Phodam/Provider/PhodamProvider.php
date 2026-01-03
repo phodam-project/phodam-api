@@ -13,7 +13,7 @@ use Attribute;
 
 /**
  * Attribute to declare a type provider.
- * 
+ *
  * Place this attribute on a provider class to declare:
  * - The type it provides for
  * - Optional name (for named providers)
@@ -26,5 +26,6 @@ class PhodamProvider
         public string $type,
         public ?string $name = null,
         public bool $overriding = false
-    ) {}
+    ) {
+    }
 }
