@@ -10,16 +10,23 @@ declare(strict_types=1);
 namespace Phodam;
 
 use Phodam\Provider\ProviderBundleInterface;
-use Phodam\Store\RegistrarInterface;
 
 interface PhodamSchemaInterface
 {
-    public function forType(string $type): RegistrarInterface;
-
     /**
      * @param ProviderBundleInterface | class-string<ProviderBundleInterface> $bundle
      */
-    public function add($bundle): void;
+    public function registerBundle($bundle): void;
+
+    /**
+     * @param ProviderInterface | class-string<ProviderInterface> $providerOrClass
+     */
+    public function registerProvider($provider): void;
+
+    /**
+     * @param TypeDefinition $definition
+     */
+    public function registerTypeDefinition(TypeDefinition $definition): void;
 
     public function getPhodam(): PhodamInterface;
 }
